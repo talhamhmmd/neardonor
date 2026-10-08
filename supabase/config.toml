@@ -1,0 +1,12 @@
+# Supabase CLI project configuration.
+#
+# The two Edge Functions authenticate in-code (service-role JWT or
+# x-worker-secret), so verify_jwt is disabled to allow the header-based path.
+
+project_id = "neardonor"
+
+[functions.send-push-notifications]
+verify_jwt = false
+
+[functions.expire-requests]
+verify_jwt = false
